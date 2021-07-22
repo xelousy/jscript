@@ -1,29 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-body{
+body {
     background-color: black;
     background-blend-mode: multiply;
     text-align: center;
     color: azure;
     font-size: larger;
-
-
-}
-label{
-    color: blue;
-    text-align: right;
+    font-size: xx-large;
+    margin: 25px;
     
 }
-.eader h3{
-    padding: 15px;
-    font-weight: 700;
-    font-size: xx-large;
-}
-.header{
-    float: left;
-    margin-left: ;
-    border-radius: 50%;
-}
+
