@@ -1,25 +1,27 @@
-var akan = function(y, m, d, g) {
-  var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-  var maleNames = ["Kwasi", "Kudwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-  var d = new Date(y, --m, d);
-  if (g === "Female") {
-      return d && femaleNames[d.getDay()];
-  } else {
-      return d && maleNames[d.getDay()];
-  }
+function resultForm(){
+  event.preventDefault();
+
+  alert ('Form has been submitted')
+  var calender2 = document.getElementById("date").value;
+  var newMale = ["Kwasi", "Kwaduo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+  var newFemale = ["Akosua", "Adwoa", "Abeena", "Akua", "Yaa", "Afua", "Ama"];
+  // if(document.myForm.date.value == "" || document.myForm.date.value > ){ 
+  //     alert("Your date is overdue");
+  //     return(false);
+  // } 
+
+  var calender = new Date (calender2);
+  var dayIndex = calender.getDay();
+  
+  if(document.getElementById("male").checked){
+      var maleNames = newMale[dayIndex];
+      document.getElementById("card").innerHTML = 'Your Ankan name is' + maleNames ;
+  };
+
+  if(document.getElementById("female").checked){
+      var femaleNames = newFemale[dayIndex];
+      document.getElementById("card").innerHTML = ' Your Ankan name is' + femaleNames ;
+
 }
 
-// User interface (or front-end) logic:
-$(document).ready(function() {
-  $("form#form").submit(function(event) {
-      event.preventDefault();
-      var y = parseInt($("#year").val());
-      var m = parseInt($("#month").val());
-      var d = parseInt($("#date").val());
-      var g = $("input:radio[name=gender]:checked").val();
-      var result = akan(y, m, d, g);
-      alert("Your akan name is: " + result);
-      //refresh page
-      document.getElementById("form").reset();
-  });
-});
+}
