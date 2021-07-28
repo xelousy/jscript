@@ -17,16 +17,24 @@
     <h2>The Akan Name Generator</h2>
 
     <div>
+        
         <form id="Form">
-
+            
+            
+            
             <label for="date">Date of Birth</label>
             <input type="date" id="date" class="form-control" name="date" style="text-align: center;">
-            <div class="col-md-12">
-            <input type="radio" name="gender" class="form-control" id="male">Male
-            <input type="radio" name="gender" class="form-control" id="female">Female
+            <div class="col-md-12" style="margin-top: 20px;">
+                <input type="radio" name="gender" class="form-control" id="male">Male
             </div>
+            <div class="col-md-12" style="margin-top: 20px;">
+                <input type="radio" name="gender" class="form-control" id="female">Female
+            </div>
+            
+            <button  id="reset" value="reset"  style="margin-bottom: 20px;"> Reset</button>
+            
             <input type="submit"value="Submit" onClick="resultForm()">
-            <input type="reset" value="Reset">
+            <!-- <input id="reset" value="Reset"> -->
         </form>
 
     </div>
